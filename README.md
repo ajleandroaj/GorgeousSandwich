@@ -11,4 +11,4 @@ During all development, all the practices that I consider the best practices of 
 
 # Project statements
 * [**Statement 1**](./docs/statement_1.md): Monolith
-* **Statement 2**: Microservice (in progress)
+* [**Statement 2**](./docs/statement_2.md): Microservice
