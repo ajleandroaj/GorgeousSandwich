@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+left to right direction
+Client --> (1. Sign-up)
+Client --> (2. Login)
+Client --> (3. Order sandwiches)
+newpage
+
+left to right direction
+Admin --> (1. Sign-up)
+Admin --> (2. Login)
+Admin --> (3. Manage sandwiches)
+Admin --> (4. Manage shops)
+Admin --> (5. Manage orders)
+Admin --> (6. Manage customers)
+Admin --> (7. Manage promotions)
+@enduml

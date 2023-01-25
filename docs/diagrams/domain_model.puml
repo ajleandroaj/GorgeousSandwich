@@ -53,7 +53,7 @@ namespace net.management.customer {
         taxInformationNumber
         address
         email
-        authenticationDate
+        authenticationData
     }
 }
 
