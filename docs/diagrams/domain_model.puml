@@ -1,0 +1,82 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+namespace net.management.sandwich {
+    class Sandwich {
+        designation
+        sellingPrice
+        description
+    }
+    class Language {
+        code
+        isAllowed
+    }
+}
+
+namespace net.management.shop {
+    class Shop {
+        designation
+        address
+        personInCharge
+        openingHours
+    }
+    class Person {
+        name
+        email
+    }
+
+    Shop::personInCharge *-- "1" Person
+}
+
+namespace net.management.order {
+    class Order {
+        client
+        shop
+        deliveryDay
+        orderLines
+    }
+    class OrderLine {
+        product
+        quantity
+        price
+    }
+
+    Order::client -> "1" net.management.customer.Customer
+    Order::shop --> "1" net.management.shop.Shop
+    Order::orderLines *-- "*" OrderLine
+    OrderLine::product --> "1" net.management.sandwich.Sandwich
+}
+
+namespace net.management.customer {
+    class Customer {
+        name
+        taxInformationNumber
+        address
+        email
+        authenticationDate
+    }
+}
+
+namespace net.management.promotion {
+    abstract class Promotion {
+        percentage
+        products
+        period
+    }
+    class GlobalPromotion
+    class LocalPromotion {
+        shops
+    }
+    class Period {
+        startAt
+        endAt
+    }
+
+    Promotion <|-- GlobalPromotion
+    Promotion <|-- LocalPromotion
+    Promotion::products -> "*" net.management.sandwich.Sandwich
+    Promotion::period *-- "1" Period
+    LocalPromotion::shops o-- "*" net.management.shop.Shop
+}
+
+@enduml

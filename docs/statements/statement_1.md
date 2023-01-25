@@ -86,7 +86,7 @@ After a QAW, some potential architecture drivers and quality attribute scenarios
    at [SEI. 20189](https://wiki.sei.cmu.edu/confluence/display/java/SEI+CERT+Oracle+Coding+Standard+for+Java) that were
    applied. Proper tools should be used.
 
-![ml_metrics.png](./imgs/ml_metrics.png)
+![ml_metrics.png](../imgs/ml_metrics.png)
 Figure 2.1: An experiment with ML metric
 
 Note: payment is not included in this initial experiment.
