@@ -41,3 +41,31 @@ regarding who manage each component. In order to simplify, an Admin actor is use
 components.
 
 ![use_cases_admin.png](docs/imgs/use_cases_admin.png)
+
+## Architecture drivers and quality attribute
+
+1. The prototype to be developed must be accessible using a web browser and it should be available in the next four
+   weeks.
+2. Authentication is needed for the prototype. It must ensure that 99% of unauthorized login attempts are detected. For
+   the prototype, the team must explore a solution that prevents brute-force authentication attempts and comes as close
+   as possible to the specified value. Authorization will be introduced later.
+3. The FoodSoftware wants to start considering metrics to improve the codebase. At this moment, no more than 5 metrics
+   should be used, but the focus should be on what can bring benefits. At least one is mandatory to explore, an
+   experimental
+   metric ([A Promising New Metric To Track Maintainability](https://blog.hello2morrow.com/2018/12/a-promising-new-metric-to-track-maintainability))
+   to indicate the maintainability level of the application. The Sonargraph-Explorer tool is able to calculate it. The
+   team has carried out some experiments with the tool and aims to reach a value of at least 70% (see Figure 2.1). Other
+   applications can be considered for other maintainability metrics.
+4. Testing on various quality dimensions is mandatory for the prototype, including the business rules captured in domain
+   layers and what can ensure the correct functioning of the application and its API. More than the number of tests, it
+   is important to explain and document what the tests allow to verify, regardless of the type of tests, together with
+   the analysis of the prototype with inclusion in the repository of specific reports of the applications used.
+   Tests must be used in the demonstration.
+5. Only open-source tools and technologies are allowed, except those clearly mentioned in this document.
+6. Although a distributed Microservices architecture is the target - not to be now addressed, the team needs to start
+   with a Monolith with loose coupling between components.
+7. Security issues in applications previously developed by the company highlight the need for careful design of what can
+   have security implications. Thus, the team needs to think about some secure by design principles and threads to
+   mitigate. Mention the rules described
+   at [SEI. 20189](https://wiki.sei.cmu.edu/confluence/display/java/SEI+CERT+Oracle+Coding+Standard+for+Java) that were
+   applied. Proper tools should be used.
